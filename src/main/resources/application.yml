@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: userservice-eureka-client
+server:
+  port: 1995
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
