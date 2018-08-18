@@ -1,6 +1,12 @@
 spring:
   application:
     name: userservice-eureka-client
+  cloud:
+    config:
+      discovery:
+        service-id: configserver
+      uri: http://localhost:8880
+      
 server:
   port: 1995
 eureka:
@@ -9,3 +15,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
