@@ -3,9 +3,8 @@ spring:
     name: userservice-eureka-client
   cloud:
     config:
-      discovery:
-        service-id: configserver
       uri: http://localhost:8880
+      profile: development
       
 server:
   port: 1995
